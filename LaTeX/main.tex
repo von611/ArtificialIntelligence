@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{listings}
+
+
+
+\begin{document}
+\title{Hello \LaTeX\xspace World}
+\author{ernieargel\\
+\small{Computer Engineering and Computer Science.}\\
+\small{California State University of Long Beach}\\
+\small{\texttt{ernie.argel@student.csulb.edu}}
+}
+\date{August 31 2020}
+\maketitle
+
+\begin{abstract}
+    This document is a model and instructions for \LaTeX\xspace `article' class.
+\end{abstract}
+
+\section{Introduction}
+Welcome to the \LaTeX\xspacem world.
+
+\section{Ease of Use}
+
+\subsection{Maintaining the Integrity of the Specifications}
+
+The `article' class is used to format your paper and style and the text. All margins, spaces, and text fonts are prescribed.
+
+\section{Styling Guide}
+
+\subsection{Abbreviations and Acronyms}
+Define abbreviations and acronyms the first time they are used in the text. All margins, spaces, and text fonts are prescribed.
+
+\subsection{Equations}
+\begin{equation}
+    \sum_{n=0}^{\infty}\frac{af^{n}}{n!}(x-a)^n
+\label{taylor}
+\end{equation}
+\eqref{taylor} is the famous Taylor series. Use ``\eqref{taylor}'', not ``Eq.~\eqref{taylor}''or
+``equation \eqref{taylor}'', except at the beginning of a sentence: ``Equation \eqref{taylor} is..."
+
+Taylor series in a text would be $\sum_{n=0}^{\infty}\frac{af^{n}}{n!}(x-a)^n$
+
+\subsection{Lists}
+Bullet style list.
+\begin{enumerate}
+    \item item 1
+    \item item 2
+    \item item 3
+\end{enumerate}
+
+\subsection{Figures and Tables}
+\paragraph{Positioning Figures and Tables} Figure captions should be below the figures; table heads should appear above the tables. Insert figures and tables after they are cited in the text. Use the abbreviation
+``Fig.~\ref{fig}''.
+
+\begin{table}[htbp]
+\caption{Table Type Styles}
+\begin{center}
+\begin{tabular}{|c||c|c|c|}
+\hline
+\textbf{Table}&\multicolumn{3}{|c|}{\textbf{Table Column Head}} \\
+\cline{2-4}
+\textbf{Head} & \textbf{\textit{Table column subhead}}& \textbf{\textit{Subhead}}&
+\textbf{\textit{Subhead}} \\
+\hline
+& & & \\
+\hline
+\end{tabular}
+\label{tab1}
+\end{center}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\columnwidth]{fig1}
+\caption{Working example}
+\label{fig}
+\end{figure}
+
+\subsection{Algorithms}
+\begin{algorithmic}
+    \STATE $i\gets 10$
+    \IF {$i\geq 5$}
+    \STATE {$i\gets i-1$}
+    \ELSE 
+    \IF {$i\leq 3$}
+    \STATE $i\gets i + 2$
+    \ENDIF
+    \ENDIF
+\end{algorithmic}
+
+\lstset
+{
+    frame=tb,
+    language=Java,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspace=false,
+    columns=flexible,
+    basicstyle={\small\ttfamily},
+    numbers=none,
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=3
+}
+
+\subsection{Source codes}
+\lstinputlisting{HelloWorld.java}
+
+\begin{verbatim}
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World");
+    }
+}
+\end{verbatim}
+
+\subsection{References}
+Please number citations consecutively within brackets [1]. The sentence punctuation follows the bracket [2]. Refer simply to the reference number, as in [3]—do not use “Ref. [3]” or “reference [3]” except at the beginning of a sentence.
+
+\begin{thebibliography}{00}
+\bibitem{Eason} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
+\bibitem{Maxwell} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
+\bibitem{Jacobs} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350
+\end{thebibliography}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
